@@ -70,14 +70,13 @@ function shuffle(array) {
 }
 
 // Button to Shuffle Cards
-buttonShuffle.onclick = function () {
-   shuffle(cards); 
- game.innerHTML = "";
-console.log("i'm shuffling the cards!");
-for (let card of cards){
-  cards.push(card);
-            game.insertAdjacentHTML("beforeend", "<div style='background-image:url(" + url + card + ")' class='card'>");
-  }
+buttonShuffle.onclick = function() {
+    shuffle(cards);
+    game.innerHTML = "";
+    console.log("i'm shuffling the cards!");
+    for (let card of cards) {
+        game.insertAdjacentHTML("beforeend", "<div style='background-image:url(" + url + card + ")' class='card'>");
+    }
 };
 /* ---------------------------------------------------
 DON'T CHANGE THE Fisher-Yates SHUFFLE FUNCTION BELOW!
