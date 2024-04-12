@@ -73,10 +73,13 @@ function shuffle(array) {
 buttonShuffle.onclick = function() {
     shuffle(cards);
     game.innerHTML = "";
-    console.log("i'm shuffling the cards!");
+   let i= 0;
     for (let card of cards) {
-        game.insertAdjacentHTML("beforeend", "<div style='background-image:url(" + url + card + ")' class='card'>");
-    }
+        game.insertAdjacentHTML("beforeend", "<div style='background-image:url(" + url + card + ")' id="+i+ "class='card'>");
+ i= i + 1;
+}
+ console.log("i'm shuffling the cards!");
+buttonShuffle.style.color ="silver";
 };
 /* ---------------------------------------------------
 DON'T CHANGE THE Fisher-Yates SHUFFLE FUNCTION BELOW!
